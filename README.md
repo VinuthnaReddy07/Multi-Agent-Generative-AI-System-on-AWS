@@ -2,9 +2,10 @@
 
 This repository contains a proof-of-concept multi-agent architecture for a restaurant/retail workflow (menu, orders, payments, promos, stores) with AWS tooling and deployment scripts.
 
+
 ## Architecture
 
-![image](architecture/Main Architecture.png)
+![Main Architecture](architecture/Main%20Architecture.png)
 
 ## Repository Layout
 
