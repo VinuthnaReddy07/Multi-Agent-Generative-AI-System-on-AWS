@@ -1,0 +1,106 @@
+STORES EXPERT KNOWLEDGE BASE
+
+HOLIDAY AND SPECIAL HOURS:
+Some stores may operate on reduced hours or close entirely on national holidays such as Thanksgiving, Christmas, or New Year’s Day. Hours may also vary for regional events or severe weather. Customers are advised to check the store’s hours via the app or website, which are updated in real-time. Pop-up notifications or banners may also inform users of upcoming changes.
+
+SERVICES AVAILABLE PER LOCATION:
+Store services can vary depending on the location. These may include:
+- Wi-Fi availability (free, limited-time, or secured)
+- Mobile ordering support
+- Curbside pickup
+- In-store seating
+- Outdoor seating
+- Restroom access
+- Charging outlets for devices
+
+ACCESSIBILITY DETAILS:
+Many locations are equipped with accessibility features to accommodate guests with disabilities. These may include:
+- Wheelchair-accessible entrances
+- Low-height ordering counters
+- Braille menus (available upon request)
+- Staff trained to assist visually or hearing-impaired customers
+
+PARKING AND DRIVE-THRU:
+Parking availability may vary by store. Stores in urban areas may not have dedicated parking, while suburban stores typically do. Drive-thru features are listed per location in the app. Some stores may offer dual-lane or mobile-order pickup lanes. For stores in malls or complexes, customers should follow signage for shared or designated spaces.
+
+REAL-TIME QUEUE WAIT TIMES:
+Some high-traffic stores may provide estimated wait times in-store or at drive-thru via the app. These are calculated using store activity and may update every few minutes.
+
+STORE AMENITIES:
+Customers may look for amenities such as kid-friendly seating, high chairs, play corners, or quiet zones. Some stores adjust music volume or lighting based on time of day or foot traffic. Details may be listed on the store profile in the app.
+
+FRANCHISE VS. CORPORATE STORES:
+Not all stores are owned by the same entity. Franchise-operated locations may have slight variations in pricing, menu options, store policies, and loyalty point redemption. Corporate stores adhere to unified policies.
+
+REGIONAL RESTRICTIONS:
+Certain stores may follow local ordinances, such as:
+- Plastic straw bans
+- Limits on drive-thru hours
+- Noise ordinances
+- Mandatory bag charges
+Store-specific notices will be displayed in-app if applicable.
+
+STORE CONTACT OPTIONS:
+Most stores do not have direct phone lines. All inquiries should be routed through app chat or customer support. However, a callback may be arranged for unresolved issues.
+
+TEMPORARY CLOSURES OR RENOVATIONS:
+If a store is closed temporarily for maintenance, remodels, or emergencies, the store will be marked as unavailable in the app. The expected reopening date may be shown when available.
+
+ORDER-AHEAD PARKING ZONES:
+Select stores offer designated parking spots for mobile orders. Look for labeled signs or zone numbers. Customers should check in via app to alert staff of arrival.
+
+LANGUAGE SUPPORT AT STORE:
+Many stores provide signage in multiple languages depending on the area. Some staff members may speak languages other than English. Language support may be highlighted in store descriptions when available.
+
+STORE-LEVEL ISSUE REPORTING:
+If a customer experiences a problem in-store—such as unclean facilities, poor service, or operational issues—they can report it through the feedback form in the app, by replying to their digital receipt, or by contacting support directly. Reports are forwarded to the store manager and regional quality team.
+
+LOYALTY REDEMPTION:
+Customers can redeem points at eligible locations by scanning the app at checkout. Not all offers are redeemable at every store due to franchise variations. If a store does not accept rewards, customers will be notified before finalizing the transaction.
+
+STORE AVAILABILITY DATA:
+Store open/close status, service availability (like drive-thru), and hours are synced from the store's POS and internal systems. Updates typically occur within 5 minutes. If there’s a mismatch between real-world status and the app, customers are encouraged to report it so the data can be refreshed.
+
+NOISE LEVELS:
+Some locations have ambient music or quiet zones depending on store design and customer feedback. Music volume may be adjusted based on time of day.
+
+PET POLICY:
+Service animals are allowed in all stores. Some locations may also have pet-friendly patios or outdoor seating. Pets are not allowed indoors unless specified.
+
+RESTROOM ACCESS POLICY:
+Most stores allow restroom use for paying customers. Some stores may require a code to access restrooms. Signs at the store will indicate restroom policy.
+
+GROUP SEATING:
+Select stores offer large tables or designated seating for groups. Availability may vary and reservations are not typically accepted.
+
+LOST & FOUND:
+Items left behind can be claimed by contacting the store directly. Found items are typically held at the front counter for a few days before being turned over to the store’s regional office.
+
+LOCAL MENU VARIATIONS:
+Certain locations may offer regional or seasonal items not found nationwide. These are marked in the menu interface and updated regularly.
+
+STORE EVENTS AND PROMOTIONS:
+Some stores host events like barista demos, seasonal launches, or community appreciation days. These events are promoted via email, in-store signage, and the mobile app.
+
+CUSTOMER REVIEWS AND RATINGS:
+Customers can leave store-specific ratings and reviews via the app. Ratings influence local store quality scores and help improve operations.
+
+STORE HIRING INFO:
+Interested in working at a specific store? Visit the careers page in the app or website. Some stores may have QR codes posted for walk-in applications.
+
+ENVIRONMENTAL PRACTICES:
+Stores may feature recycling bins, compostable packaging, and incentives for bringing reusable cups. Eco-certified locations are marked with green badges in the app.
+
+DELIVERY PARTNER PRESENCE:
+Many stores fulfill orders via third-party platforms such as Uber Eats or DoorDash. Items and availability may differ slightly from the in-store menu.
+
+INVENTORY TRANSPARENCY:
+Sold-out items are removed from the ordering interface as soon as the POS system syncs inventory. This usually occurs in near real-time.
+
+MOBILE APP INTEGRATIONS:
+Some locations support app features like contactless check-in, order progress notifications, or loyalty point tracking. Availability varies by region.
+
+AGE POLICIES:
+Some stores may have rules for unaccompanied minors, require ID for specific promotions, or observe quiet hours in designated study zones.
+
+For all store-specific concerns, customers should refer to the store profile page in the app, which contains the latest known data synced from store systems and regional configurations.

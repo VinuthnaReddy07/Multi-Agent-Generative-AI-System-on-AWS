@@ -1,0 +1,59 @@
+Frequently Asked Questions:
+
+1. What’s the difference between espresso and drip coffee?
+Espresso is a concentrated shot brewed by forcing hot water through finely-ground coffee under pressure, while drip coffee uses gravity to slowly pass water through coarser grounds.
+
+2. Is cold brew stronger than regular iced coffee?
+Yes. Cold brew typically has more caffeine and a smoother, less acidic taste because it’s steeped for hours in cold water.
+
+3. What’s the best milk alternative for a creamy texture?
+Oat milk is the most popular dairy-free option for creaminess, followed by soy milk.
+
+4. Can I order a drink with no added sugar?
+Yes. Many drinks can be made sugar-free by omitting syrups or using sugar-free alternatives like stevia or sugar-free vanilla.
+
+5. How much caffeine is in a typical drink?
+It varies: espresso (~90 mg), cold brew (~200 mg), latte (~150 mg), chai (~60 mg), green tea (~30 mg).
+
+6. Are all drinks available iced?
+Most coffee and tea drinks can be served iced upon request, except some specialty lattes and hot-only seasonal options.
+
+7. What are the most popular donut and drink pairings?
+Glazed donut with latte, chocolate donut with cold brew, and maple donut with americano are top picks.
+
+8. Can I customize the sweetness level of my drink?
+Yes. You can request half-sweet, sugar-free, or add extra syrup as needed.
+
+9. Are there any gluten-free donut options?
+Currently, all donuts contain gluten. Gluten-free options are in consideration for future menus.
+
+10. What is matcha and how is it different from green tea?
+Matcha is powdered green tea whisked into milk or water, offering a stronger flavor and more antioxidants than traditional steeped green tea.
+
+Latte: A Latte is a classic espresso-based drink made with one shot of espresso and steamed milk, topped with a thin layer of foam. It’s typically served hot in an 8 to 12 oz cup. Available sizes: small, medium, large. Flavor profile: smooth, creamy, mildly sweet. Common customizations include adding syrups (vanilla, caramel), switching to oat or almond milk, and extra shots. Sweetener options include stevia, honey, and sugar-free syrups. Best paired with a glazed donut. Contains about 150 mg of caffeine and 130–220 calories. Preparation: hand-crafted by barista. Allergy info: contains dairy; cross-contamination with gluten possible. Not sugar-free by default.
+
+Cold Brew: Cold Brew is made by steeping coarse coffee grounds in cold water for 12–24 hours and served chilled. Available sizes: medium, large. Flavor profile: smooth, bold, low-acidity. Common customizations: splash of milk, sweet cream, or flavored syrup. Sweetener options: sugar-free syrup, honey. Best paired with chocolate donut. Caffeine: ~200 mg. Calories: 0–5 when served black. Preparation: slow cold steep. Allergy info: naturally dairy-free, sugar-free, gluten-free.
+
+Americano: An Americano is made by diluting a shot of espresso with hot water. Served hot or iced. Sizes: small, medium. Flavor profile: bold, clean, slightly bitter. Often customized with a splash of milk or a sweetener. Sweetener options: stevia, classic syrup. Best with maple donut. Caffeine: ~120 mg. Calories: near zero. Preparation: pulled espresso, hot water. Allergy info: free from dairy, sugar, gluten.
+
+Mocha: A Mocha combines espresso, steamed milk, and chocolate syrup. Served hot or iced. Sizes: medium, large. Flavor: rich, chocolaty, sweet. Customizations: non-dairy milk, sugar-free chocolate, whipped cream. Sweetener options: chocolate syrup, sugar-free chocolate. Best paired with cinnamon sugar donut. Caffeine: ~130 mg. Calories: 250–350. Preparation: hand-mixed by barista. Allergy info: contains dairy and chocolate; gluten-free by ingredients.
+
+Espresso: Espresso is a concentrated coffee shot made by forcing hot water through finely-ground beans. Served in 1–2 oz size. Flavor: strong, intense, slightly bitter. Customizations: extra shot, splash of milk. No sweetener by default. Best with Boston cream donut. Caffeine: ~90 mg. Calories: <5. Preparation: pulled shot. Allergy info: naturally dairy-free, sugar-free, gluten-free.
+
+Chai Latte: A Chai Latte blends black tea, spices, and steamed milk. Served hot. Sizes: medium, large. Flavor: spiced, aromatic, creamy. Customizations: oat milk, less sweet. Sweetener: honey, sugar-free syrup. Best with chocolate donut. Caffeine: ~60 mg. Calories: 200–250. Preparation: brewed chai base. Allergy: contains dairy; customizable; gluten-free by default.
+
+Green Tea: Green Tea is brewed from green tea leaves. Served hot or iced. Sizes: small, medium. Flavor: grassy, mild, earthy. Common customizations: lemon, honey. Sweetener options: honey, stevia. Best with glazed donut. Caffeine: ~30 mg. Calories: 0–5. Preparation: steeped. Allergy info: free from dairy, sugar, gluten.
+
+Black Tea: Black Tea is steeped from black tea leaves. Served hot. Sizes: small, medium. Flavor: bold, tannic, slightly astringent. Customizations: milk, sweetener. Sweeteners: honey, sugar. Best with maple donut. Caffeine: ~40 mg. Calories: near zero unless sweetened. Allergy: free from dairy, sugar, gluten unless modified.
+
+Matcha Latte: Matcha Latte is made with ground green tea powder and steamed milk. Served hot or iced. Sizes: medium, large. Flavor: earthy, slightly bitter, creamy. Customizations: dairy-free milk, extra matcha. Sweeteners: honey, vanilla. Best with cinnamon sugar donut. Caffeine: ~45 mg. Calories: 120–180. Prep: whisked and steamed. Allergy: contains dairy unless customized; gluten-free.
+
+Glazed Donut: A yeast donut coated in sugar glaze. Size: single standard. Flavor: sweet, soft. Customizations: none. Best with coffee drinks. Sweeteners: sugar. Calories: ~250. Prep: baked then glazed. Allergy: contains dairy, gluten, sugar.
+
+Chocolate Donut: A cake donut with chocolate glaze. Size: single. Flavor: rich, cocoa-heavy. No common customizations. Best with chai latte or espresso. Sweeteners: sugar. Calories: ~280. Prep: baked and topped. Allergy: contains dairy, gluten, sugar.
+
+Maple Donut: A yeast donut with maple glaze. Size: single. Flavor: sweet, maple. Customizations: not common. Best with americano. Sweetener: maple glaze. Calories: ~270. Prep: baked and glazed. Allergy: contains gluten, dairy, sugar.
+
+Boston Cream Donut: A filled donut with custard and chocolate glaze. Size: standard. Flavor: creamy, chocolaty. No customizations. Best with espresso. Sweeteners: sugar. Calories: ~300. Prep: filled and glazed. Allergy: contains dairy, gluten, eggs.
+
+Cinnamon Sugar Donut: A donut coated with cinnamon sugar. Size: single. Flavor: spiced, sweet. Customizations: not typical. Best with green tea. Sweetener: sugar. Calories: ~260. Prep: rolled in sugar blend. Allergy: contains dairy, gluten, sugar.

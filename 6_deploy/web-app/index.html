@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Coffee Shop</title>
+  <!-- Montserrat font for flashy title -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+  <!-- Enhanced styles -->
+  <link rel="stylesheet" href="enhanced-styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.7/dist/amazon-cognito-identity.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1563.0.min.js"></script>
+  <script src="cognito-enhanced.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Top Header with Title and Sign Out -->
+    <div class="top-header">
+      <div class="header-content">
+        <h1 class="main-title">☕ Virtual Coffee Shop</h1>
+        <p class="subtitle">Your favorite place for Coffee, Tea, and Donuts!</p>
+      </div>
+      <button id="signOutButton" class="bubble-btn signout-btn compact top-signout">
+        <span class="btn-icon">👋</span>
+        <span class="btn-text">Sign Out</span>
+      </button>
+    </div>
+    
+    <div class="chatbot-section">
+      <div class="chatbot-header">
+        <h2>BrewBot AI Agent</h2>
+        <div class="user-controls-header">
+          <div class="connection-status" id="connection-status">Connecting...</div>
+          
+          <!-- CloudWatch Dropdown Button -->
+          <div class="dropdown-container">
+            <button id="cloudwatchButton" class="bubble-btn cloudwatch-btn compact">
+              <span class="btn-icon">📊</span>
+              <span class="btn-text">CloudWatch</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div id="cloudwatchDropdown" class="dropdown-menu">
+              <a href="#" id="agentDashboardLink" class="dropdown-item">
+                <span class="dropdown-icon">📈</span>
+                Agent Dashboard
+              </a>
+              <a href="#" id="agentLogsLink" class="dropdown-item">
+                <span class="dropdown-icon">📋</span>
+                Agent Logs
+              </a>
+            </div>
+          </div>
+          
+          <!-- Store Locator Dropdown Button -->
+          <div class="dropdown-container">
+            <button id="storeLocatorButton" class="bubble-btn store-locator-btn compact">
+              <span class="btn-icon">📍</span>
+              <span class="btn-text" id="selected-store-text">Select Store</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div id="storeLocatorDropdown" class="dropdown-menu store-dropdown-menu">
+              <!-- Store options will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enhanced Chatbot Widget - Larger Size -->
+      <div class="chatbot-container-main large" id="chatbot">
+        <div class="chatbot-messages" id="chatbot-messages">
+          <div class="bot-message" id="initial-greeting">Loading...</div>
+        </div>
+        <form class="chatbot-input-area" id="chatbot-form">
+          <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" required>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      
+      <!-- Sample Prompts Section -->
+      <div class="sample-prompts">
+        <h3>Try these sample prompts to test BrewBot:</h3>
+        <div class="prompt-buttons">
+          <button class="prompt-btn" onclick="sendSamplePrompt('What if my drink arrives cold?')">What if my drink arrives cold?</button>
+          <button class="prompt-btn" onclick="sendSamplePrompt('How much caffeine is in a typical drink?')">How much caffeine is in a typical drink?</button>
+          <button class="prompt-btn" onclick="sendSamplePrompt('Does stores have public restrooms?')">Does stores have public restrooms?</button>
+          <button class="prompt-btn" onclick="sendSamplePrompt('What are the different payment methods I can use?')">What are the different payment methods I can use?</button>
+          <button class="prompt-btn" onclick="sendSamplePrompt('How can I use the promotions?')">How can I use the promotions?</button>
+          <button class="prompt-btn" onclick="sendSamplePrompt('I want to place a large order for my office')">I want to place a large order for my office</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="menu-categories" id="menu-categories">
+        <!-- Menu will be loaded dynamically -->
+        <div class="loading-menu">Loading menu...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include enhanced scripts -->
+  <script src="agentcore-client-fixed.js?v=2"></script>
+  <script src="script-enhanced.js?v=2"></script>
+  
+  <script>
+    // Store Locator functionality
+    let selectedStore = null;
+    let storeData = [];
+    
+    // Load store data from the stores records
+    async function loadStoreData() {
+      try {
+        // Store data from stores_records.json (subset for demo)
+        storeData = [
+          {"store_id": "c8f3d560-1e2d-4c7b-a478-1fa731865321", "name": "Naperville Brew", "address": "100 Water St", "city": "Naperville", "state": "IL", "zip_code": "60540", "has_drive_thru": true, "hours_start": "06:00", "hours_end": "20:00"},
+          {"store_id": "9c1f02f7-8a2e-4f1d-8a7e-2b617af8478a", "name": "Peoria Perks", "address": "100 Adams St", "city": "Peoria", "state": "IL", "zip_code": "61602", "has_drive_thru": true, "hours_start": "06:30", "hours_end": "20:00"},
+          {"store_id": "3dc67218-b120-4c9c-84ea-c00bd264042f", "name": "Juneau Java", "address": "100 Marine Way", "city": "Juneau", "state": "AK", "zip_code": "99801", "has_drive_thru": false, "hours_start": "07:00", "hours_end": "19:00"},
+          {"store_id": "e1e95ff1-57cb-4e4e-9c1f-021f58d0a7ec", "name": "Bismarck Brews", "address": "123 5th St", "city": "Bismarck", "state": "ND", "zip_code": "58501", "has_drive_thru": false, "hours_start": "06:30", "hours_end": "20:00"},
+          {"store_id": "457c2bd1-f8f1-43a0-a7ed-2b6efb5a2bb4", "name": "Cheyenne Cup", "address": "400 Capitol Ave", "city": "Cheyenne", "state": "WY", "zip_code": "82001", "has_drive_thru": true, "hours_start": "06:00", "hours_end": "20:30"},
+          {"store_id": "2f1a5f08-7b4e-4a20-9437-92b71f387001", "name": "Downtown Cafe", "address": "123 Main St", "city": "Seattle", "state": "WA", "zip_code": "98101", "has_drive_thru": false, "hours_start": "06:00", "hours_end": "21:00"},
+          {"store_id": "e3dc0532-18a9-4be8-baf9-325d7e2abf44", "name": "Northside Brew", "address": "456 North Ave", "city": "Lynnwood", "state": "WA", "zip_code": "98036", "has_drive_thru": true, "hours_start": "05:30", "hours_end": "22:00"},
+          {"store_id": "f46301f4-2b83-47db-bb30-68997950c64c", "name": "Eastlake Espresso", "address": "789 Eastlake Ave", "city": "Bellevue", "state": "WA", "zip_code": "98004", "has_drive_thru": false, "hours_start": "07:00", "hours_end": "20:00"},
+          {"store_id": "7b015245-296c-4e8c-9102-12c239cfad2e", "name": "Rainier Roast", "address": "901 Rainier Ave", "city": "Renton", "state": "WA", "zip_code": "98057", "has_drive_thru": true, "hours_start": "06:00", "hours_end": "22:00"},
+          {"store_id": "b8e8bb9d-1207-4ab3-bd96-97cf7f814dd6", "name": "Capitol Perk", "address": "1501 4th Ave", "city": "Seattle", "state": "WA", "zip_code": "98101", "has_drive_thru": false, "hours_start": "06:30", "hours_end": "20:30"}
+        ];
+        
+        // Set default store to Seattle Downtown Cafe
+        selectedStore = storeData.find(store => store.store_id === "2f1a5f08-7b4e-4a20-9437-92b71f387001");
+        updateSelectedStoreDisplay();
+        populateStoreDropdown();
+
+      } catch (error) {
+        console.error('Error loading store data:', error);
+      }
+    }
+    
+    function populateStoreDropdown() {
+      const dropdown = document.getElementById('storeLocatorDropdown');
+      if (!dropdown) return;
+      
+      // Group stores by city
+      const storesByCity = {};
+      storeData.forEach(store => {
+        const cityState = `${store.city}, ${store.state}`;
+        if (!storesByCity[cityState]) {
+          storesByCity[cityState] = [];
+        }
+        storesByCity[cityState].push(store);
+      });
+      
+      // Sort cities alphabetically
+      const sortedCities = Object.keys(storesByCity).sort();
+      
+      let dropdownHTML = '';
+      sortedCities.forEach(cityState => {
+        dropdownHTML += `<div class="store-city-group">`;
+        dropdownHTML += `<div class="store-city-header">${cityState}</div>`;
+        
+        // Sort stores within city by name
+        storesByCity[cityState].sort((a, b) => a.name.localeCompare(b.name));
+        
+        storesByCity[cityState].forEach(store => {
+          const hours = `${store.hours_start} - ${store.hours_end}`;
+          const driveThruBadge = store.has_drive_thru ? '<span class="drive-thru-badge">Drive-Thru</span>' : '';
+          
+          dropdownHTML += `
+            <div class="store-item" onclick="selectStore('${store.store_id}')">
+              <div class="store-name">${store.name}${driveThruBadge}</div>
+              <div class="store-address">${store.address}, ${store.city}, ${store.state} ${store.zip_code}</div>
+              <div class="store-hours">Hours: ${hours}</div>
+            </div>
+          `;
+        });
+        
+        dropdownHTML += `</div>`;
+      });
+      
+      dropdown.innerHTML = dropdownHTML;
+    }
+    
+    function selectStore(storeId) {
+      selectedStore = storeData.find(store => store.store_id === storeId);
+      updateSelectedStoreDisplay();
+      
+      // Close dropdown using active class
+      const storeDropdownContainer = document.querySelector('#storeLocatorButton')?.closest('.dropdown-container');
+      if (storeDropdownContainer) {
+        storeDropdownContainer.classList.remove('active');
+      }
+      
+      // Store selection in session storage for agent use
+      if (selectedStore) {
+        sessionStorage.setItem('selectedStore', JSON.stringify(selectedStore));
+        console.log('Selected store:', selectedStore);
+      }
+    }
+    
+    function updateSelectedStoreDisplay() {
+      const selectedStoreText = document.getElementById('selected-store-text');
+      if (selectedStoreText && selectedStore) {
+        selectedStoreText.textContent = `${selectedStore.name} - ${selectedStore.city}`;
+      }
+    }
+    
+    // Enhanced functionality for sign out and connection status
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure Sign Out button works properly
+      const signOutBtn = document.getElementById('signOutButton');
+      if (signOutBtn) {
+        signOutBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('Sign Out button clicked');
+          
+          // Show confirmation
+          if (confirm('Are you sure you want to sign out?')) {
+            // Clear session storage
+            sessionStorage.removeItem('idToken');
+            sessionStorage.removeItem('username');
+            localStorage.removeItem('chatbot_session_id');
+            
+            console.log('Session cleared, redirecting to login...');
+            
+            // Redirect to login page
+            window.location.href = 'login.html';
+          }
+        });
+        console.log('Sign Out button event listener added successfully');
+      } else {
+        console.error('Sign Out button not found');
+      }
+      
+      // CloudWatch Dropdown Functionality
+      const cloudwatchBtn = document.getElementById('cloudwatchButton');
+      const cloudwatchDropdown = document.getElementById('cloudwatchDropdown');
+      const dropdownContainer = cloudwatchBtn?.parentElement;
+      
+      if (cloudwatchBtn && cloudwatchDropdown) {
+        // Toggle dropdown on button click
+        cloudwatchBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          dropdownContainer.classList.toggle('active');
+          console.log('CloudWatch dropdown toggled');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!dropdownContainer.contains(e.target)) {
+            dropdownContainer.classList.remove('active');
+          }
+          
+          // Close store locator dropdown when clicking outside
+          const storeDropdownContainer = document.querySelector('#storeLocatorButton')?.closest('.dropdown-container');
+          if (storeDropdownContainer && !storeDropdownContainer.contains(e.target)) {
+            storeDropdownContainer.classList.remove('active');
+          }
+        });
+        
+        // Load observability configuration and set up links
+        loadObservabilityConfig();
+        
+        console.log('CloudWatch dropdown functionality added successfully');
+      } else {
+        console.error('CloudWatch dropdown elements not found');
+      }
+      
+      // Store Locator Dropdown Functionality
+      const storeLocatorButton = document.getElementById('storeLocatorButton');
+      const storeLocatorDropdown = document.getElementById('storeLocatorDropdown');
+      const storeDropdownContainer = storeLocatorButton?.closest('.dropdown-container');
+      
+      if (storeLocatorButton && storeLocatorDropdown && storeDropdownContainer) {
+        storeLocatorButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          if (dropdownContainer) {
+            dropdownContainer.classList.remove('active');
+          }
+          
+          // Toggle store dropdown using active class
+          storeDropdownContainer.classList.toggle('active');
+        });
+        
+        console.log('Store Locator dropdown functionality added successfully');
+      } else {
+        console.error('Store Locator dropdown elements not found');
+      }
+      
+      // Initialize store data
+      loadStoreData();
+      
+      // Function to load observability configuration
+      async function loadObservabilityConfig() {
+        try {
+          const response = await fetch('observability-config.json');
+          const config = await response.json();
+          
+          // Set up Agent Dashboard link
+          const agentDashboardLink = document.getElementById('agentDashboardLink');
+          if (agentDashboardLink && config.cloudwatch?.dashboardUrl) {
+            agentDashboardLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.open(config.cloudwatch.dashboardUrl, '_blank');
+              dropdownContainer.classList.remove('active');
+              console.log('Opening Agent Dashboard:', config.cloudwatch.dashboardUrl);
+            });
+          }
+          
+          // Set up Agent Logs link
+          const agentLogsLink = document.getElementById('agentLogsLink');
+          if (agentLogsLink) {
+            const logsUrl = 'https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fp2pTestAgentsWebSocketFunction';
+            agentLogsLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.open(logsUrl, '_blank');
+              dropdownContainer.classList.remove('active');
+              console.log('Opening Agent Logs:', logsUrl);
+            });
+          }
+          
+          console.log('Observability configuration loaded successfully');
+        } catch (error) {
+          console.error('Failed to load observability configuration:', error);
+          
+          // Fallback URLs if config fails to load
+          const agentDashboardLink = document.getElementById('agentDashboardLink');
+          const agentLogsLink = document.getElementById('agentLogsLink');
+          
+          if (agentDashboardLink) {
+            agentDashboardLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              const fallbackDashboardUrl = 'https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards:name=P2P-Agent-Metrics';
+              window.open(fallbackDashboardUrl, '_blank');
+              dropdownContainer.classList.remove('active');
+              console.log('Opening Agent Dashboard (fallback):', fallbackDashboardUrl);
+            });
+          }
+          
+          if (agentLogsLink) {
+            agentLogsLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              const fallbackLogsUrl = 'https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fp2pTestAgentsWebSocketFunction';
+              window.open(fallbackLogsUrl, '_blank');
+              dropdownContainer.classList.remove('active');
+              console.log('Opening Agent Logs (fallback):', fallbackLogsUrl);
+            });
+          }
+        }
+      }
+      
+      // Enhanced connection status simulation
+      setTimeout(() => {
+        const connectionStatus = document.getElementById('connection-status');
+        if (connectionStatus) {
+          connectionStatus.textContent = 'Connected';
+          connectionStatus.classList.add('connected');
+        }
+      }, 2000);
+      
+      // Add test function for loading animation (for debugging)
+      window.testLoadingAnimation = function() {
+        console.log('Testing loading animation...');
+        const testMsg = addMessage('', 'bot', 'processing');
+        console.log('Test loading message created');
+        
+        // Remove after 5 seconds for testing
+        setTimeout(() => {
+          removeProcessingMessages();
+          addMessage('Test loading animation completed!', 'bot');
+        }, 5000);
+      };
+      
+      console.log('Loading animation test function available: testLoadingAnimation()');
+      
+      // Load and display interactive menu
+      loadInteractiveMenu();
+    });
+    
+    
+    // Menu data (embedded to avoid CORS issues)
+    const menuData = [
+      {
+        "item_id": "latte",
+        "name": "Latte",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 92,
+          "caffeine_mg": 150
+        }
+      },
+      {
+        "item_id": "coldbrew",
+        "name": "Cold Brew",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": true,
+          "is_sugar_free": true,
+          "popularity_score": 85,
+          "caffeine_mg": 200
+        }
+      },
+      {
+        "item_id": "americano",
+        "name": "Americano",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": true,
+          "is_sugar_free": true,
+          "popularity_score": 80,
+          "caffeine_mg": 120
+        }
+      },
+      {
+        "item_id": "mocha",
+        "name": "Mocha",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 83,
+          "caffeine_mg": 130
+        }
+      },
+      {
+        "item_id": "espresso",
+        "name": "Espresso",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": true,
+          "is_sugar_free": true,
+          "popularity_score": 88,
+          "caffeine_mg": 90
+        }
+      },
+      {
+        "item_id": "flat_white",
+        "name": "Flat White",
+        "category": "coffee",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 87,
+          "caffeine_mg": 155
+        }
+      },
+      {
+        "item_id": "chai_latte",
+        "name": "Chai Latte",
+        "category": "tea",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 78,
+          "caffeine_mg": 60
+        }
+      },
+      {
+        "item_id": "green_tea",
+        "name": "Green Tea",
+        "category": "tea",
+        "attributes_json": {
+          "is_dairy_free": true,
+          "is_sugar_free": true,
+          "popularity_score": 70,
+          "caffeine_mg": 30
+        }
+      },
+      {
+        "item_id": "black_tea",
+        "name": "Black Tea",
+        "category": "tea",
+        "attributes_json": {
+          "is_dairy_free": true,
+          "is_sugar_free": true,
+          "popularity_score": 72,
+          "caffeine_mg": 40
+        }
+      },
+      {
+        "item_id": "matcha_latte",
+        "name": "Matcha Latte",
+        "category": "tea",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 75,
+          "caffeine_mg": 45
+        }
+      },
+      {
+        "item_id": "donut_glazed",
+        "name": "Glazed Donut",
+        "category": "donut",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 88
+        }
+      },
+      {
+        "item_id": "donut_chocolate",
+        "name": "Chocolate Donut",
+        "category": "donut",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 90
+        }
+      },
+      {
+        "item_id": "donut_maple",
+        "name": "Maple Donut",
+        "category": "donut",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 84
+        }
+      },
+      {
+        "item_id": "donut_boston",
+        "name": "Boston Cream Donut",
+        "category": "donut",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 81
+        }
+      },
+      {
+        "item_id": "donut_cinnamon",
+        "name": "Cinnamon Sugar Donut",
+        "category": "donut",
+        "attributes_json": {
+          "is_dairy_free": false,
+          "is_sugar_free": false,
+          "popularity_score": 79
+        }
+      }
+    ];
+    
+    function loadInteractiveMenu() {
+      const menuContainer = document.getElementById('menu-categories');
+      if (!menuContainer) return;
+      
+      // Group items by category
+      const categories = {};
+      menuData.forEach(item => {
+        if (!categories[item.category]) {
+          categories[item.category] = [];
+        }
+        categories[item.category].push(item);
+      });
+      
+      // Sort items within each category by popularity
+      Object.keys(categories).forEach(category => {
+        categories[category].sort((a, b) => b.attributes_json.popularity_score - a.attributes_json.popularity_score);
+      });
+      
+      // Create category display names and icons
+      const categoryInfo = {
+        'coffee': { name: 'Coffees', icon: '☕', description: 'Freshly brewed coffee, espresso, and specialty drinks' },
+        'tea': { name: 'Teas', icon: '🍵', description: 'Premium teas and tea-based beverages' },
+        'donut': { name: 'Donuts', icon: '🍩', description: 'Fresh donuts with various glazes and fillings' }
+      };
+      
+      // Clear loading message
+      menuContainer.innerHTML = '';
+      
+      // Create expandable categories
+      Object.keys(categories).forEach(categoryKey => {
+        const category = categoryInfo[categoryKey];
+        const items = categories[categoryKey];
+        
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'menu-category';
+        
+        categoryElement.innerHTML = `
+          <div class="menu-category-header" onclick="toggleCategory('${categoryKey}')">
+            <div class="category-info">
+              <span class="category-icon">${category.icon}</span>
+              <div class="category-text">
+                <h3>${category.name}</h3>
+                <p>${category.description}</p>
+              </div>
+            </div>
+            <span class="category-arrow">▼</span>
+          </div>
+          <div class="menu-category-items" id="category-${categoryKey}">
+            ${items.map(item => `
+              <div class="menu-item-card" onclick="selectMenuItem('${item.item_id}', '${item.name}')">
+                <div class="item-header">
+                  <h4>${item.name}</h4>
+                  <span class="popularity-badge">${item.attributes_json.popularity_score}% ⭐</span>
+                </div>
+                <div class="item-details">
+                  ${item.attributes_json.caffeine_mg ? `<span class="detail-badge caffeine">☕ ${item.attributes_json.caffeine_mg}mg caffeine</span>` : ''}
+                  ${item.attributes_json.is_dairy_free ? '<span class="detail-badge dairy-free">🥛 Dairy Free</span>' : ''}
+                  ${item.attributes_json.is_sugar_free ? '<span class="detail-badge sugar-free">🍯 Sugar Free</span>' : ''}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        
+        menuContainer.appendChild(categoryElement);
+      });
+      
+      console.log('Interactive menu loaded successfully');
+    }
+    
+    function toggleCategory(categoryKey) {
+      const categoryItems = document.getElementById(`category-${categoryKey}`);
+      const arrow = categoryItems.parentElement.querySelector('.category-arrow');
+      
+      if (categoryItems.style.display === 'none' || !categoryItems.style.display) {
+        categoryItems.style.display = 'block';
+        arrow.style.transform = 'rotate(180deg)';
+        categoryItems.parentElement.classList.add('expanded');
+      } else {
+        categoryItems.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
+        categoryItems.parentElement.classList.remove('expanded');
+      }
+    }
+    
+    function selectMenuItem(itemId, itemName) {
+      // Add the selected item to the chat
+      const chatInput = document.getElementById('chatbot-input');
+      if (chatInput) {
+        chatInput.value = `I'd like to order a ${itemName}`;
+        chatInput.focus();
+      }
+      
+      // Optional: Auto-send the message
+      // const chatForm = document.getElementById('chatbot-form');
+      // if (chatForm) {
+      //   chatForm.dispatchEvent(new Event('submit'));
+      // }
+    }
+  </script>
+</body>
+</html>

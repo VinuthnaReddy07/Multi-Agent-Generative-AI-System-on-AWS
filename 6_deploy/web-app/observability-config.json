@@ -1,0 +1,10 @@
+{
+    "observabilityType": "cloudwatch",
+    "cloudwatch": {
+        "region": "us-west-2",
+        "dashboardUrl": "https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards:name=P2P-Agent-Metrics",
+        "logGroupPrefix": "p2p-agents",
+        "metricsNamespace": "P2P/Agents"
+    },
+    "enabled": true
+}

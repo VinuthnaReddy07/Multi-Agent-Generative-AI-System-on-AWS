@@ -1,0 +1,121 @@
+PROMOTION-RELATED KNOWLEDGE BASE FOR OFFERS EXPERT
+
+1. Promo Eligibility Rules:
+Defines who qualifies for a promotion. Some promos are exclusive to new users, members of certain loyalty tiers, or customers in specific regions. Eligibility is typically determined at checkout based on account metadata.
+
+2. Promo Stacking Policy:
+Clarifies whether multiple promotions can be combined. For example, a user may not be able to use a discount code and redeem loyalty points in the same transaction. Stacking rules are displayed during offer application.
+
+3. Promo Code Troubleshooting:
+Covers common reasons why a code might not work: expired, invalid format, usage cap reached, case sensitivity, or ineligibility. Suggests checking terms or contacting support.
+
+4. Redemption Channels:
+Lists where a promotion can be applied: in-app, in-store, drive-thru, or online. Some promos are channel-exclusive. Redemption method is shown in offer details.
+
+5. Loyalty Point Use Rules:
+Outlines minimum spend thresholds, restrictions on what items points can be used for, and how to apply them. Some items (e.g., gift cards) may be excluded.
+
+6. Refunds and Promotions:
+Explains how refunds impact promotional value. If a promo is used and the order is canceled or refunded, the promo might not be reusable unless explicitly stated.
+
+7. Promo Types:
+Describes types of offers—percent off, dollar off, free item with purchase, BOGO (buy one get one), or loyalty multiplier (e.g., 2x points).
+
+8. Promo Duration and Renewals:
+Details when the offer starts and ends. Also notes if the promo is recurring (e.g., every Monday) or one-time. Automatic renewals may be included for loyalty milestones.
+
+9. Targeted Promotions:
+Explains that some offers are personalized based on user behavior, purchase history, or region. These may not be visible to all users.
+
+10. Out-of-Stock Handling:
+Clarifies what happens if a promo item is unavailable. Customers may receive a substitute, delay, or cancellation message. App notifies user before checkout.
+
+11. Time-Limited Flash Offers:
+Promos valid for only a few hours or a single day. Users must act quickly. Push notifications or banners usually alert users.
+
+12. Usage Limits Per Customer:
+Defines how many times a single customer can use a promo. For example, one-time use only, once per week, or a daily limit.
+
+13. Geo-Fenced Promotions:
+Promos that are only valid in certain zip codes or store locations. Often used to promote new stores or local events.
+
+14. Promo for Group Orders:
+Explains whether offers apply to group orders and if each member can apply their own code.
+
+15. Age-Restricted Promotions:
+Some discounts (e.g., senior or student discounts) require age verification. Must present valid ID or verify through app.
+
+16. Exclusive Channel Offers:
+Some promos are exclusive to iOS or Android users, or only through specific marketing emails or campaigns.
+
+17. Social Media Campaigns:
+Covers promo codes released via Instagram, Twitter, or influencer partnerships. These often have usage caps or short lifespans.
+
+18. Holiday and Seasonal Offers:
+Outlines recurring offers for holidays (e.g., Valentine’s, Halloween). These may follow consistent patterns year-over-year.
+
+19. Feedback-Based Rewards:
+Some promos are given in exchange for completing surveys or providing feedback. Details how and when these are granted.
+
+20. Referral Promotions:
+Describes how users earn credit or promos by referring friends. Lists referral link mechanics, rewards, and restrictions.
+
+1. **What types of promotions do you offer?**
+   We offer seasonal discounts, BOGO deals, loyalty rewards, and limited-time promo codes.
+
+2. **How can I find current offers?**
+   Check our mobile app, website, or in-store displays for ongoing promotions.
+
+3. **Can I use multiple offers at once?**
+   Unless explicitly stated, promotions cannot be combined or stacked.
+
+4. **Why didn't my promo code work?**
+   It may be expired, case-sensitive, or not applicable to your cart items.
+
+5. **Is there a student or senior discount?**
+   Yes, students and seniors receive 10% off in-store with valid ID.
+
+6. **Do I need to sign in to use a promotion?**
+   Yes, most offers are tied to your loyalty account and require sign-in.
+
+7. **Are offers valid at all locations?**
+   Some offers are location-specific. Check the terms for store eligibility.
+
+8. **Can I redeem promotions in the drive-thru?**
+   Yes, most promos are valid via drive-thru unless noted otherwise.
+
+9. **Do offers apply to delivery orders?**
+   Some promos apply to delivery; check the app for eligible options.
+
+10. **Can I apply a discount after the order is placed?**
+    No, discounts must be applied before finalizing payment.
+
+11. **Why was my discount removed at checkout?**
+    It may not meet the required cart value or include excluded items.
+
+12. **Are there bundle discounts available?**
+    Yes, we periodically offer bundle pricing on drinks + donuts or bagels.
+
+13. **How often do new promotions launch?**
+    We introduce new offers monthly, and during holidays or special events.
+
+14. **Do loyalty points affect promotional pricing?**
+    No, promotional discounts are separate from loyalty redemptions.
+
+15. **Can I use a promo code with gift card payment?**
+    Yes, promo codes can be applied regardless of payment method.
+
+16. **I forgot to apply my code. Can it be refunded?**
+    Unfortunately, we can't retroactively apply promotions after purchase.
+
+17. **Are there app-exclusive offers?**
+    Yes, app users may receive special promotions and early access deals.
+
+18. **Can I sign up for email promotions?**
+    Yes, subscribe via our website or app settings to receive promo emails.
+
+19. **What happens if a promo item is out of stock?**
+    We may substitute with an equivalent product or apply the discount to a similar item.
+
+20. **How do I report a promotion issue?**
+    Contact our support via app or website with your order details and promo code used.

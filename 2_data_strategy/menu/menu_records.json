@@ -1,0 +1,495 @@
+[
+  {
+    "item_id": "latte",
+    "name": "Latte",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 92,
+      "caffeine_mg": 150,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "coldbrew",
+    "name": "Cold Brew",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 85,
+      "caffeine_mg": 200,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": false,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "americano",
+    "name": "Americano",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 80,
+      "caffeine_mg": 120,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "mocha",
+    "name": "Mocha",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 83,
+      "caffeine_mg": 130,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "espresso",
+    "name": "Espresso",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 88,
+      "caffeine_mg": 90,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "chai_latte",
+    "name": "Chai Latte",
+    "category": "tea",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 78,
+      "caffeine_mg": 60,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "green_tea",
+    "name": "Green Tea",
+    "category": "tea",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 70,
+      "caffeine_mg": 30,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "black_tea",
+    "name": "Black Tea",
+    "category": "tea",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 72,
+      "caffeine_mg": 40,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "flat_white",
+    "name": "Flat White",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 87,
+      "caffeine_mg": 155,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "matcha_latte",
+    "name": "Matcha Latte",
+    "category": "tea",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 75,
+      "caffeine_mg": 45,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "donut_glazed",
+    "name": "Glazed Donut",
+    "category": "donut",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 88
+    }
+  },
+  {
+    "item_id": "donut_chocolate",
+    "name": "Chocolate Donut",
+    "category": "donut",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 90
+    }
+  },
+  {
+    "item_id": "donut_maple",
+    "name": "Maple Donut",
+    "category": "donut",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 84
+    }
+  },
+  {
+    "item_id": "donut_boston",
+    "name": "Boston Cream Donut",
+    "category": "donut",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 81
+    }
+  },
+  {
+    "item_id": "donut_cinnamon",
+    "name": "Cinnamon Sugar Donut",
+    "category": "donut",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 79
+    }
+  },
+  {
+    "item_id": "pumpkin_spice_latte",
+    "name": "Pumpkin Spice Latte",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 95,
+      "caffeine_mg": 150,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [9, 10, 11]
+    }
+  },
+  {
+    "item_id": "peppermint_mocha",
+    "name": "Peppermint Mocha",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 90,
+      "caffeine_mg": 130,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12, 1, 2]
+    }
+  },
+  {
+    "item_id": "eggnog_latte",
+    "name": "Eggnog Latte",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 85,
+      "caffeine_mg": 150,
+      "can_be_offered_in_cold": false,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12, 1]
+    }
+  },
+  {
+    "item_id": "irish_cream_coffee",
+    "name": "Irish Cream Coffee",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 82,
+      "caffeine_mg": 140,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [3]
+    }
+  },
+  {
+    "item_id": "cherry_blossom_latte",
+    "name": "Cherry Blossom Latte",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 88,
+      "caffeine_mg": 150,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [4, 5]
+    }
+  },
+  {
+    "item_id": "summer_berry_iced_tea",
+    "name": "Summer Berry Iced Tea",
+    "category": "tea",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": false,
+      "popularity_score": 86,
+      "caffeine_mg": 25,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": false,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [6, 7, 8]
+    }
+  },
+  {
+    "item_id": "caramel_apple_cider",
+    "name": "Caramel Apple Cider",
+    "category": "specialty",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 89,
+      "caffeine_mg": 0,
+      "can_be_offered_in_cold": false,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [9, 10, 11]
+    }
+  },
+  {
+    "item_id": "hot_chocolate_deluxe",
+    "name": "Hot Chocolate Deluxe",
+    "category": "specialty",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 91,
+      "caffeine_mg": 5,
+      "can_be_offered_in_cold": false,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  },
+  {
+    "item_id": "cloud_pioneer_latte",
+    "name": "Cloud Pioneer Latte",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 94,
+      "caffeine_mg": 160,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12],
+      "special_event": "reinvent_2025"
+    }
+  },
+  {
+    "item_id": "serverless_espresso",
+    "name": "Serverless Espresso",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 92,
+      "caffeine_mg": 95,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12],
+      "special_event": "reinvent_2025"
+    }
+  },
+  {
+    "item_id": "machine_learning_mocha",
+    "name": "Machine Learning Mocha",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": false,
+      "is_sugar_free": false,
+      "popularity_score": 96,
+      "caffeine_mg": 135,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12],
+      "special_event": "reinvent_2025"
+    }
+  },
+  {
+    "item_id": "devops_dark_roast",
+    "name": "DevOps Dark Roast",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 89,
+      "caffeine_mg": 180,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": true,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12],
+      "special_event": "reinvent_2025"
+    }
+  },
+  {
+    "item_id": "lambda_cold_brew",
+    "name": "Lambda Cold Brew",
+    "category": "coffee",
+    "attributes_json": {
+      "is_dairy_free": true,
+      "is_sugar_free": true,
+      "popularity_score": 93,
+      "caffeine_mg": 210,
+      "can_be_offered_in_cold": true,
+      "can_be_offered_in_hot": false,
+      "available_size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "seasonal": true,
+      "season_months": [12],
+      "special_event": "reinvent_2025"
+    }
+  }
+]

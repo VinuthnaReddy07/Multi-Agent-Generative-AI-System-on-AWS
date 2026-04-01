@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Free Donut Fridays",
+    "description": "Get a free glazed donut with any drink purchase every Friday.",
+    "valid_from": "2024-01-01",
+    "valid_to": "2025-12-31",
+    "eligibility": "All customers",
+    "promo_code": "FRIDAYDONUT"
+  },
+  {
+    "title": "Student Discount",
+    "description": "15% off your entire order with a valid student ID.",
+    "valid_from": "2024-09-01",
+    "valid_to": "2025-06-30",
+    "eligibility": "Students only",
+    "promo_code": "STUDENT15"
+  },
+  {
+    "title": "Double Points Day",
+    "description": "Earn 2x loyalty points on orders over $10.",
+    "valid_from": "2025-05-01",
+    "valid_to": "2025-05-31",
+    "eligibility": "Loyalty members",
+    "promo_code": ""
+  },
+  {
+    "title": "Mocha Mondays",
+    "description": "50% off any Mocha beverage on Mondays.",
+    "valid_from": "2025-01-01",
+    "valid_to": "2025-12-31",
+    "eligibility": "All customers",
+    "promo_code": "MOCHAMONDAY"
+  },
+  {
+    "title": "New User Welcome",
+    "description": "$5 off your first order when you sign up.",
+    "valid_from": "2024-06-01",
+    "valid_to": "2025-06-01",
+    "eligibility": "New users only",
+    "promo_code": "WELCOME5"
+  }
+]
