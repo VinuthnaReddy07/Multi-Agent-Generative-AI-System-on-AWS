@@ -1,4 +1,4 @@
-# Multi Agent on AWS
+# Multi-Agent Generative AI System on AWS
 
 This repository contains a proof-of-concept multi-agent architecture for a restaurant/retail workflow (menu, orders, payments, promos, stores) with AWS tooling and deployment scripts.
 
