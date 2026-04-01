@@ -30,7 +30,7 @@ This workflow demonstrates how to **design, build, and validate agentic AI solut
 
 ---
 
-##Objectives
+## Objectives
 
 By the end of this project, you will be able to:
 
@@ -64,7 +64,7 @@ By the end of this project, you will be able to:
 
    * Conduct interactive natural language scenario testing
 
-##Architecture
+## Architecture
 
 ![Main Architecture](architecture/Main%20Architecture.png)
 
