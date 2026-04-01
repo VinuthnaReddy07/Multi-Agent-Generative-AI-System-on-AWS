@@ -1,4 +1,4 @@
 # Ignore environment variable files and setup scripts
-.env*
+env.sh
 check_env.sh
 setup_env.sh
