@@ -1,6 +1,34 @@
-# Multi Agent on AWS
 
-This repository contains a proof-of-concept multi-agent architecture for a restaurant/retail workflow (menu, orders, payments, promos, stores) with AWS tooling and deployment scripts.
+
+# Multi-Agent Generative AI System on AWS
+
+This repository contains a **proof-of-concept multi-agent architecture** for restaurant and retail workflows, covering:
+
+* Menu management
+* Orders
+* Payments
+* Promotions
+* Stores
+
+It demonstrates how to build **production-ready agentic AI applications** using **Amazon Bedrock**, **Strands SDK**, and **multi-agent collaboration (MAC) systems**. The system integrates **knowledge bases (RAG)** and a **supervisor agent** to orchestrate tasks across specialized sub-agents.
+
+---
+
+## Complete Path-to-Production Workflow
+
+1. **Ideation & Business Modeling** – Define AI use cases and quantify business value.
+2. **Data Strategy** – Implement domain-specific data sources and integrate with knowledge bases.
+3. **Multi-Agent System Development** – Build, orchestrate, and test specialized AI agents for a coffee shop scenario.
+
+**Key technologies include:**
+
+* **Bedrock Knowledge Bases** for retrieval-augmented generation (RAG)
+* **Strands SDK** for creating specialized AI agents
+* **Supervisor Agent** to orchestrate multi-agent collaboration across business domains
+
+This workflow demonstrates how to **design, build, and validate agentic AI solutions** capable of handling complex business workflows through intelligent task orchestration and domain-specific expertise.
+
+---
 
 
 ## Architecture
