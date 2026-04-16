@@ -30,39 +30,6 @@ This workflow demonstrates how to **design, build, and validate agentic AI solut
 
 ---
 
-## Objectives
-
-By the end of this project, you will be able to:
-
-1. **Design and validate AI use cases**
-
-   * Use interactive Streamlit applications for ideation and quantitative business value modeling
-
-2. **Implement a comprehensive data strategy**
-
-   * Provision and configure domain-specific data sources:
-
-     * Amazon DynamoDB
-     * Amazon Aurora MySQL
-     * Amazon S3
-   * Integrate these sources with knowledge bases
-
-3. **Create and configure knowledge bases**
-
-   * Use **Bedrock** with S3 data sources and **Amazon OpenSearch Serverless** vector storage
-
-4. **Build specialized AI agents**
-
-   * Using the **Strands SDK** framework
-   * Domains: Orders, Menu, Stores, Payments, Promotions
-
-5. **Implement a Multi-Agent Collaboration (MAC) system**
-
-   * Deploy a **Barista Supervisor agent** to orchestrate tasks across sub-agents
-
-6. **Test and validate the complete agentic AI system**
-
-   * Conduct interactive natural language scenario testing
 
 ## Architecture
 
